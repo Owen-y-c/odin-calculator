@@ -106,7 +106,7 @@ function setOperation(operator) {
 }
 
 function resetBottomRow(){
-    operationRowBottom.textContent = "0";
+    operationRowBottom.textContent = "";
     shouldResetRowBottom = false;
 }
 
