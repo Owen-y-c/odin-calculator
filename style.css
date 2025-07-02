@@ -1,72 +1,133 @@
-.calc-body{
-    background-color: #333;
-    height: 400px;
-    width: 300px;
-    padding: 1px 15px 5px 15px;
+:root {
+    --background: #656565;
+    --font: #222;
+    --border: #333;
+    --screen: #b0c792;
+    --calculator: #333;
+    --btn: #959595;
+    --btn-hover: #a3a3a3;
+    --btn-active: #ccc;
+    --btn-red: rgb(248, 94, 94);
+    --btn-red-hover: rgb(255, 129, 129);
+    --btn-red-active: #d88;
+    --btn-orange: rgb(248, 169, 94);
+    --btn-orange-hover: rgb(255, 169, 129);
+    --btn-orange-active: rgb(221, 169, 136);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--font);
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+    margin-bottom: 100px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    min-height: 500px;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+.calc-body {
+    width: 400px;
+    border: 2px var(--border) solid;
     border-radius: 5px;
+    padding: 20px;
+    background-color: var(--calculator);
 }
 
-.calc-screen{
+.calc-screen {
+    padding: 10px 20px;
+    border: 2px var(--border) solid;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: var(--screen);
+    text-align: right;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.screen-top {
+    min-height: 32px;
+    font-size: 20px;
+}
+
+.screen-bottom {
+    min-height: 64px;
+    font-size: 40px;
+}
+
+.buttons-grid{
     display: flex;
+    flex-wrap: wrap;
+    width: 350px;
+}
+
+.btn {
+    flex: 0 0 25%;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px var(--border) solid;
+    border-radius: 5px;
+    background-color: var(--btn);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: flex-end;
-    margin: 10px;
-    background-color: rgb(214, 245, 182);
     height: 80px;
-    border-radius: 1px;
-    overflow: hidden;
-    }
-    .calc-screen-text{
-        font-size: 2rem;
-        padding-right: 5px;
-        padding-left: 5px;
 }
 
-.calc-buttons-container{
-    display: flex;
-    gap: 5px;
-    align-items: flex-start;
-    justify-content: space-around;
-    padding-top: 20px;
+.wide-2{
+    flex: 0 0 50%;
 }
 
-.calc-number-container{
-    display: flex;
-    flex-wrap: wrap;
-    width: 150px;
-    align-items: center;
-    justify-content: center;
-    }
-    .number-btn{
-        font-size: 2rem;
-        width: 50px;
-        height: 62.5px;
-        box-sizing: border-box;
-        background-color: rgb(140, 140, 140);
+
+
+.btn:hover {
+    background-color: var(--btn-hover);
 }
 
-.calc-operator-container{
-    display: flex;
-    max-width: 100px;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    }
-    .operator-btn{
-        font-size: 2rem;
-        width: 50px;
-        height: 50px;
-        background-color: rgb(180, 180, 180);
+.btn:active {
+    background-color: var(--btn-active);
 }
 
-[data-id="="],[data-id="+"]{
-    height: 100px;
+.btn-red {
+    background-color: var(--btn-red);
+}
+.btn-red:hover {
+    background-color: var(--btn-red-hover);
+}
+.btn-red:active {
+    background-color: var(--btn-red-active);
 }
 
-[data-id="d"]{
-    width: 100px;
+.btn-orange {
+    background-color: var(--btn-orange);
+}
+.btn-orange:hover {
+    background-color: var(--btn-orange-hover);
+}
+.btn-orange:active {
+    background-color: var(--btn-orange-active);
 }
 
-[data-id="c"],[data-id="d"]{
-    background-color: brown;
-}
+
