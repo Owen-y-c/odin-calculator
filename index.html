@@ -9,32 +9,31 @@
 <body>
     <div class="calc-body">
         <div class="calc-screen">
-            <p class="calc-screen-text">0</p>
+            <div class="screen-top"    id="operationRowTop"></div>
+            <div class="screen-bottom" id="operationRowBottom"></div>
         </div>
-        <div class="calc-buttons-container">
-            <div class="calc-number-container">
-                <button class="number-btn" data-id="7" >7</button>
-                <button class="number-btn" data-id="8" >8</button>
-                <button class="number-btn" data-id="9" >9</button>
-                <button class="number-btn" data-id="4" >4</button>
-                <button class="number-btn" data-id="5" >5</button>
-                <button class="number-btn" data-id="6" >6</button>
-                <button class="number-btn" data-id="1" >1</button>
-                <button class="number-btn" data-id="2" >2</button>
-                <button class="number-btn" data-id="3" >3</button>
-                <button class="number-btn" data-id="0" >0</button>
-                <button class="number-btn" data-id="00">00</button>
-                <button class="number-btn" data-id="." >.</button>
-            </div>
-            <div class="calc-operator-container">
-                <button class="operator-btn" data-id="d">DEL</button>
-                <button class="operator-btn" data-id="/">&divide;</button>
-                <button class="operator-btn" data-id="c">C</button>
-                <button class="operator-btn" data-id="*">X</button>
-                <button class="operator-btn" data-id="-">-</button>
-                <button class="operator-btn" data-id="+">+</button>
-                <button class="operator-btn" data-id="=">=</button>
-            </div>
+        <div class="buttons-grid">
+            <button class="btn btn-red span-2" id="btnClear">C</button>
+            <button class="btn btn-red span-2" id="btnDelete">DEL</button>
+            <button class="btn" data-number>7</button>
+            <button class="btn" data-number>8</button>
+            <button class="btn" data-number>9</button>
+            <button class="btn" data-operator>÷</button>
+
+            <button class="btn" data-number>4</button>
+            <button class="btn" data-number>5</button>
+            <button class="btn" data-number>6</button>
+            <button class="btn" data-operator>×</button>
+
+            <button class="btn" data-number>1</button>
+            <button class="btn" data-number>2</button>
+            <button class="btn" data-number>3</button>
+            <button class="btn" data-operator>−</button>
+
+            <button class="btn" id="btnPoint">.</button>
+            <button class="btn" data-number>0</button>
+            <button class="btn" id="btnEquals">=</button>
+            <button class="btn" data-operator>+</button>
         </div>
     </div>
     <script src="script.js"></script>
